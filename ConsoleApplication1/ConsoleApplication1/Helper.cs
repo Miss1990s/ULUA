@@ -24,22 +24,23 @@ namespace ConsoleApplication1
                 {
                     case LuaTypes.LUA_TSTRING:
                         {
-                            Console.WriteLine("'%s'", LuaDLL.lua_tostring(L, i));
+                            Console.WriteLine("{0}", LuaDLL.lua_tostring(L, i));
                             break;
                         }
                     case LuaTypes.LUA_TBOOLEAN:
                         {
-                            Console.WriteLine("'%s'", LuaDLL.lua_toboolean(L, i));
+                            Console.WriteLine("{0}", LuaDLL.lua_toboolean(L, i));
                             break;
                         }
                     case LuaTypes.LUA_TNUMBER:
                         {
-                            Console.WriteLine("'%s'", LuaDLL.lua_tonumber(L, i));
+                            Console.WriteLine("{0}", LuaDLL.lua_tonumber(L, i));
                             break;
                         }
                     default:
                         {
-                            Console.WriteLine("'%s'", LuaDLL.luaL_typename(L, t));
+                            string name = (t == LuaTypes.LUA_TTABLE) ? "table" : LuaDLL.lua_typename(L, t);
+                            Console.WriteLine("{0}", name);
                             break;
                         }
                 }

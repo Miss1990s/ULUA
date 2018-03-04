@@ -16,7 +16,7 @@ namespace ConsoleApplication1
             LuaDLL.luaL_openlibs(L);
             string buff;
             int error;
-            while ( (buff = Console.ReadLine()) != null){
+            while ( !String.IsNullOrWhiteSpace(buff = Console.ReadLine())){
                 error = LuaDLL.luaL_loadstring(L, buff) + LuaDLL.lua_pcall(L, 0, 0, 0);
                 if (error !=0)
                 {
@@ -24,6 +24,22 @@ namespace ConsoleApplication1
                     LuaDLL.lua_pop(L, 1);
                 }
             }
+
+            LuaDLL.lua_pushboolean(L, true);
+            LuaDLL.lua_pushnumber(L, 20);
+            LuaDLL.lua_pushnil(L);
+            LuaDLL.lua_pushstring(L, "Hello");
+            Helper.stackDump(L);
+            LuaDLL.lua_pushvalue(L, -4);
+            Helper.stackDump(L);
+            LuaDLL.lua_replace(L, 3);
+            Helper.stackDump(L);
+            LuaDLL.lua_settop(L, 6);
+            Helper.stackDump(L);
+            LuaDLL.lua_remove(L, -3);
+            Helper.stackDump(L);
+            LuaDLL.lua_settop(L, -5);
+
             LuaDLL.lua_close(L);
             return;
         }
