@@ -14,6 +14,10 @@ namespace ConsoleApplication1
 
             IntPtr L = LuaDLL.luaL_newstate();
             LuaDLL.luaL_openlibs(L);
+            int w, h;
+            CAPI.Chapter25.load(L, "config.lua", out w, out h);
+            Console.Write("width {0}, height {1}", w, h);
+
             string buff;
             int error;
             while ( !String.IsNullOrWhiteSpace(buff = Console.ReadLine())){
@@ -22,6 +26,7 @@ namespace ConsoleApplication1
                 {
                     Console.WriteLine("error " + LuaDLL.lua_tostring(L, -1));
                     LuaDLL.lua_pop(L, 1);
+                    
                 }
             }
 

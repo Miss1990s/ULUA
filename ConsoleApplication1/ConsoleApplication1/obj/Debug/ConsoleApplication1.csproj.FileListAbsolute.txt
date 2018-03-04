@@ -5,3 +5,9 @@ G:\MyProject\ULuaTest\C#API\ConsoleApplication1\ConsoleApplication1\obj\Debug\Co
 G:\MyProject\ULuaTest\C#API\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 G:\MyProject\ULuaTest\C#API\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
 G:\MyProject\ULuaTest\C#API\ConsoleApplication1\ConsoleApplication1\bin\Debug\ulua_32.dll
+D:\ULUA\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+D:\ULUA\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+D:\ULUA\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+D:\ULUA\ConsoleApplication1\ConsoleApplication1\bin\Debug\ulua_32.dll
+D:\ULUA\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+D:\ULUA\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
